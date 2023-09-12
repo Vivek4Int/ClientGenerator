@@ -1,6 +1,6 @@
 # GraphQL client class auto generation
 
-Small application to generate GraphQL client C# code. It leverages GraphQLClientGenerator libraray to achive this. Following are the process to generating GraphQL client,
+This is a small application to generate GraphQL client C# code. It leverages GraphQLClientGenerator libraray to achive this. Following are the process associated with generating GraphQL client,
 
 1. Fetch the backend schema,
 2. Deserilize the schema to GraphQLClientGenerator's schema format and,
@@ -39,4 +39,8 @@ dotnet run
 
 This will result in a generation of file named GraphQLClient.cs, which is the GraphQL client for your endpoint. This will help you in property construction your GraphQL query and mutation, rather than hardcoding them in query or mutation string.
 
-> todo: add actual use case
+## Usecase for client
+
+Refer to the [GraphQLClientGenerator GitHub page.](https://github.com/Husqvik/GraphQlClientGenerator)
+
+Internal reference title **GraphQL Client Class Generator**.
