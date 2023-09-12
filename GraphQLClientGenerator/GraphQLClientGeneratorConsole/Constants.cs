@@ -4,7 +4,7 @@ namespace GraphQLClientGeneratorConsole;
 
 public class Constants
 {
-public static readonly string  queryToFetchGrqphQLSchema = "{\"query\":\"query IntrospectionQuery {   "+
+public static readonly string  IntrospectionQuery = "{\"query\":\"query IntrospectionQuery {   "+
                 " __schema {      queryType { name }      mutationType { name }      "+
                 "subscriptionType { name }      types {        ...FullType      }     "+
                 " directives {        name        description        locations        "+

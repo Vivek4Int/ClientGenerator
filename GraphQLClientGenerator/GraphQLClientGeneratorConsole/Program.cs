@@ -15,13 +15,13 @@ public class Program
     public static void Main(string[] args)
     {
         //Endpoint of GraphQLServer
-        var  graphQLEndpoint = "http://endpoint";
+        var  graphQLEndpoint = "https://th-apim-digi-int-ae-nprod-01.azure-api.net/thetaproductsproxyapi/v1";
         
         var client = new HttpClient();
         var request = new HttpRequestMessage(HttpMethod.Post, graphQLEndpoint);
         
         //The constant QueryToFetchGraphQLSchema has the Introspection query
-        var content = new StringContent(Constants.queryToFetchGrqphQLSchema,null, "application/json");
+        var content = new StringContent(Constants.IntrospectionQuery,null, "application/json");
         request.Content = content;
 
         //GraphQL endpoint hosted at APIM, does not accept content-type as application/json with charset as UTF-8.
