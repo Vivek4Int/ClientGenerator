@@ -25,4 +25,18 @@ The deserilized schema is plugged into GraphQLClientGenerator's helper method to
 
 ## Usage
 
-todo: add usage
+### Replace the placeholder
+
+Replace the endpoint placeholder in program.cs with your actual endpoint.
+
+### Run the program
+
+Go to folder ClientGenerator\GraphQLClientGenerator\GraphQLClientGeneratorConsole and run command,
+
+``` powershell
+dotnet run
+```
+
+This will result in a generation of file named GraphQLClient.cs, which is the GraphQL client for your endpoint. This will help you in property construction your GraphQL query and mutation, rather than hardcoding them in query or mutation string.
+
+> todo: add actual use case
