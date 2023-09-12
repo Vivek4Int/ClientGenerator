@@ -15,7 +15,7 @@ public class Program
     public static void Main(string[] args)
     {
         //Endpoint of GraphQLServer
-        var  graphQLEndpoint = "https://th-apim-digi-int-ae-nprod-01.azure-api.net/thetaproductsproxyapi/v1";
+        var  graphQLEndpoint = "endpoint";
         
         var client = new HttpClient();
         var request = new HttpRequestMessage(HttpMethod.Post, graphQLEndpoint);
