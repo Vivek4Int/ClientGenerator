@@ -8,7 +8,7 @@ This is a small application to generate GraphQL client C# code. It leverages Gra
 
 ## Fetch GraphQL Schema
 
-Even though GraphQLClientGenerator library can fetch and serialize the schema in one go, it did not work with the APIM GraphQL endpoint, as it by default added charset as UTF-8, which resulted APIM endpoint prompting bad request error. The way around it was to use http client to directly fetch the schema leveraging Introspection. This way we make sure that the content header is set to "application/json" alone, with no specification of charset to use.
+Even though GraphQLClientGenerator library can fetch and serialize the schema in one go, it did not work with the APIM GraphQL endpoint, as it by default added charset as UTF-8, which resulted APIM endpoint prompting bad request error. The way around it was to use http client to directly fetch the schema leveraging Introspection. This way we make sure that the content header is set to "application/json", with no specification of charset to use.
 
 For more info on Introspection follow these links,
 
@@ -25,6 +25,8 @@ The deserilized schema is plugged into GraphQLClientGenerator's helper method to
 
 ## Usage
 
+Following are instruction on using the applicaiton,
+
 ### Replace the placeholder
 
 Replace the endpoint placeholder in program.cs with your actual endpoint.
@@ -37,7 +39,7 @@ Go to folder ClientGenerator\GraphQLClientGenerator\GraphQLClientGeneratorConsol
 dotnet run
 ```
 
-This will result in a generation of file named GraphQLClient.cs, which is the GraphQL client for your endpoint. This will help you in property construction your GraphQL query and mutation, rather than hardcoding them in query or mutation string.
+This will result in generation of file named GraphQLClient.cs, which is the GraphQL client for your endpoint. This will help you in construction of your GraphQL query and mutation, rather than hardcoding them in query or mutation string.
 
 ## Use case for client
 
