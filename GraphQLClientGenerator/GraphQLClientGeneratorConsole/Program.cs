@@ -15,7 +15,7 @@ public class Program
     public static void Main(string[] args)
     {
         //Endpoint of GraphQLServer
-        var  graphQLEndpoint = "endpoint";
+        var  graphQLEndpoint = "https://th-apim-digi-int-ae-nprod-01.azure-api.net/thetaproductsproxyapi/v1";
         
         var client = new HttpClient();
         var request = new HttpRequestMessage(HttpMethod.Post, graphQLEndpoint);
@@ -43,11 +43,22 @@ public class Program
         //Generating C# client from schema type
         var csharpCode = new GraphQlGenerator().GenerateFullClientCSharpFile(schema, "APIMGraphQLClient");
 
+
         //Write the generated client class to file named GraphQLClient.cs
-        if(File.Exists("GraphQLClient.cs"))
-            File.Delete("GraphQLClient.cs");
-        
-        File.WriteAllText("GraphQLClient.cs",csharpCode);
+        var filename = "GraphQLClient.cs";
+        if(File.Exists(filename))
+        {
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("Deleting old file.");
+            Console.ResetColor();
+            File.Delete(filename);
+        }
+        Console.ForegroundColor = ConsoleColor.DarkYellow;
+        Console.WriteLine("Creating new client file.");
+        File.WriteAllText(filename,csharpCode);
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+        Console.WriteLine("Creating new client file: {0}.",filename);
+        Console.WriteLine("FullPath: {0}",new FileInfo(filename).FullName);
     }
 
     
