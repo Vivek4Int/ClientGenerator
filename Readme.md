@@ -39,7 +39,7 @@ dotnet run
 
 This will result in a generation of file named GraphQLClient.cs, which is the GraphQL client for your endpoint. This will help you in property construction your GraphQL query and mutation, rather than hardcoding them in query or mutation string.
 
-## Usecase for client
+## Use case for client
 
 Refer to the [GraphQLClientGenerator GitHub page.](https://github.com/Husqvik/GraphQlClientGenerator)
 
